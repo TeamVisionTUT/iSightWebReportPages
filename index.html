@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+    <head>
+    
+        <title>Report</title>
+    
+        <link rel="stylesheet" href="userreport.css">
+        <script src="userreport.js"></script>
+        
+                <script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,  
+	title:{
+		text: "Number of users"
+	},
+	axisY: {
+		title: "Number of users",
+		valueFormatString: "0",
+		suffix: "",
+		prefix: ""
+	},
+	data: [{
+		type: "splineArea",
+		color: "rgba(54,158,173,.7)",
+		markerSize: 5,
+		xValueFormatString: "YYYY",
+		yValueFormatString: "##0",
+		dataPoints: [
+			{ x: new Date(2000, 0), y: 328 },
+			{ x: new Date(2001, 0), y: 383 },
+			{ x: new Date(2002, 0), y: 200 },
+			{ x: new Date(2003, 0), y: 284 },
+			{ x: new Date(2004, 0), y: 239 },
+			{ x: new Date(2005, 0), y: 161 },
+			{ x: new Date(2006, 0), y: 282 },
+			{ x: new Date(2007, 0), y: 200 },
+			{ x: new Date(2008, 0), y: 139 },
+			{ x: new Date(2009, 0), y: 250 },
+			{ x: new Date(2010, 0), y: 279 },
+			{ x: new Date(2011, 0), y: 338 },
+			{ x: new Date(2012, 0), y: 670 },
+			{ x: new Date(2013, 0), y: 602 },
+			{ x: new Date(2014, 0), y: 239 },
+			{ x: new Date(2015, 0), y: 187 },
+			{ x: new Date(2016, 0), y: 214 }
+		]
+	}]
+	});
+chart.render();
+
+}
+</script>
+    </head>
+    
+
+    <body>
+
+        <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    
+
+        <h1>Report</h1>
+        
+        <h3>Race</h3>
+        <select>
+            <option> All </option>
+            <option >African </option>
+            <option >White</option>
+            <option >Indaian</option>
+            <option> Asian </option>
+        </select>
+    
+        <container>
+            <h3>Age</h3>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+        </container>
+        
+        
+        <br>
+        
+        
+        <!-- Put this in a form -->
+
+        <container>
+        
+            <h2>Race</h2>
+            <input type="radio" name="group_group" value="All"> All<br>
+            <input type="radio" name="gender_group" value="Male" checked> Male <br>
+            <input type="radio" name="gender_group" value="Female"> Female
+        </container>
+        
+        
+        
+            <h3>City</h3>
+        <select>
+            <option> All </option>
+            <option >JHB </option>
+            <option >Capetown</option>
+            <option >Pretoria</option>
+            <option> Withbank </option>
+        </select>
+        
+        <button>Print via PDF</button>
+        
+   
+       
+       
+        
+    </body>
+
+
+
+</html>
